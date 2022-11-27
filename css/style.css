@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root {
+  --pinkColor: #ef476f;
+  --yellowColor: #ffd166;
+  --greenColor: #06D6A0;
+  --paleBlueColor: #118AB2;
+  --darkBlueColor: #073B4C;
+  --primaryFont: "Bebas Neue", cursive;
+  --headerOne: 3rem;
+  --headerTwo: 2rem;
+  --headerThree: 1.5rem;
+  --paragraf: 1rem;
+  --regFont: 400;
+  --boldFont: 700;
+  --primaryColor: #FFFFFF;
+  --secondaryColor: #232323;
+  --textDark: #232323;
+  --textLight: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--pinkColor);
+  font-size: 16px;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+header img {
+  width: 25%;
+}/*# sourceMappingURL=style.css.map */
