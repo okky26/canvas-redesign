@@ -29,7 +29,7 @@ function revealOnScroll(){
         if(elementBottomPos >= scrollPos && elementTopPos <= windowBottomPos){
             element.addClass('in-view');
         } else {
-            element.removeClass('in-view')
+            element.removeClass('in-view');
         }
     })
 }
