@@ -48,3 +48,72 @@ function parallaxBottom(target){
 
     $(target).css('transform', `translateY(${xScroll * 0.05}px)`);
 }
+
+// $('.content-container').each(function(){
+//     const dataValue = $(this).find('.elementor-counter-number').data('to-value');
+//     const reviewImg = $(this).find('.img-container > img');
+    
+//     if(dataValue===5){
+//         $(reviewImg).each(function(){
+//             $(this).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         });
+//     }else if(dataValue > 4 && dataValue < 5){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-mixes.png');
+//     }else if(dataValue===4){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else if(dataValue > 3 && dataValue < 4){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-mixes.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else if(dataValue===3){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else if(dataValue > 2 && dataValue < 3){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-mixes.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else if(dataValue===2){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else if(dataValue > 1 && dataValue < 2){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-mixes.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else if(dataValue===1){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-color.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else if(dataValue > 0 && dataValue < 1){
+//         $(reviewImg[0]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-mixes.png');
+//         $(reviewImg[1]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[2]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[3]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         $(reviewImg[4]).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//     }else{
+//         $(reviewImg).each(function(){
+//             $(this).attr('src','http://offerclaw.com/wp-content/uploads/2022/11/fire-outline.png');
+//         });
+//     }
+// });
