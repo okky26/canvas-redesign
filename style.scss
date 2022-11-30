@@ -311,6 +311,10 @@ header{
     width: 100%;
     height: 200vh;
 }
+.container-xxl{
+    width: 100%;
+    height: 300vh;
+}
 .content-container{
     width: 100%;
     height: 100%;
@@ -489,5 +493,185 @@ header{
             border-radius: 50%;
             border: solid 1px var(--secondaryColorPurple);
         }
+    }
+}
+#our-workshop{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 95%;
+    place-items: center;
+    row-gap: 2em;
+
+    .content-title{
+        font-family: var(--primaryFont);
+        font-size: var(--headerOne);
+        color: var(--textColorLight);
+
+        h2{
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: all 1s;
+            &.in-view{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        span:nth-child(1){
+            color: var(--tertierColorBlue);
+        }
+        span:nth-child(2){
+            color: var(--tertierColorYellow);
+        }
+    }
+    .img-container{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 25% 37.5% 37.5%; 
+        grid-template-areas: 
+        "landscape landscape"
+        "potrait1 potrait2"
+        "potrait3 potrait4";
+        place-items: center;
+        row-gap: .5em;
+        
+
+        .img-content__container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: all 1s;
+
+            &.in-view{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+
+            &:nth-child(1){
+                grid-area: potrait3;
+                
+                img,
+                .bg-overlay{
+                    width: 500px;
+                    height: 550px;
+                    position: absolute;
+                    border-radius: .5em;
+                    box-shadow: 0 0 15px 0 rgba($color: #000000, $alpha: 0.5);
+                }
+
+                .bg-overlay{
+                    background: var(--secondaryColorOrange);
+                    transition: transform .6s;
+                    transition-delay: .5s;
+                    transform-origin: top;
+
+                    &.in-view{
+                        transform: scaleY(0);
+                    }
+                }
+            }
+            &:nth-child(2){
+                grid-area: landscape;
+
+                img,
+                .bg-overlay{
+                    width: 900px;
+                    height: 450px;
+                    position: absolute;
+                    border-radius: .5em;
+                    box-shadow: 0 0 15px 0 rgba($color: #000000, $alpha: 0.5);
+                }
+
+                .bg-overlay{
+                    background: var(--secondaryColorPink);
+                    transition: transform .6s;
+                    transition-delay: .5s;
+                    transform-origin: top;
+
+                    &.in-view{
+                        transform: scaleY(0);
+                    }
+                }
+
+            }
+            &:nth-child(3){
+                grid-area: potrait1;
+
+                img,
+                .bg-overlay{
+                    width: 500px;
+                    height: 550px;
+                    position: absolute;
+                    border-radius: .5em;
+                    box-shadow: 0 0 15px 0 rgba($color: #000000, $alpha: 0.5);
+                }
+
+                .bg-overlay{
+                    background: var(--secondaryColorPurple);
+                    transition: transform .6s;
+                    transition-delay: .5s;
+                    transform-origin: top;
+
+                    &.in-view{
+                        transform: scaleY(0);
+                    }
+                }
+            }
+            &:nth-child(4){
+                grid-area: potrait2;
+
+                img,
+                .bg-overlay{
+                    width: 500px;
+                    height: 550px;
+                    position: absolute;
+                    border-radius: .5em;
+                    box-shadow: 0 0 15px 0 rgba($color: #000000, $alpha: 0.5);
+                }
+
+                .bg-overlay{
+                    background: var(--tertierColorBlue);
+                    transition: transform .6s;
+                    transition-delay: .5s;
+                    transform-origin: top;
+
+                    &.in-view{
+                        transform: scaleY(0);
+                    }
+                }
+            }
+            &:nth-child(5){
+                grid-area: potrait4;
+
+                img,
+                .bg-overlay{
+                    width: 500px;
+                    height: 550px;
+                    position: absolute;
+                    border-radius: .5em;
+                    box-shadow: 0 0 15px 0 rgba($color: #000000, $alpha: 0.5);
+                }
+
+                .bg-overlay{
+                    background: var(--tertierColorYellow);
+                    transition: transform .6s;
+                    transition-delay: .5s;
+                    transform-origin: top;
+
+                    &.in-view{
+                        transform: scaleY(0);
+                    }
+                }
+            }  
+        }   
     }
 }

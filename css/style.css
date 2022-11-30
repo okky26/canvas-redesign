@@ -357,6 +357,11 @@ header .nav-btn__container .hamburger span:nth-child(3) {
   height: 200vh;
 }
 
+.container-xxl {
+  width: 100%;
+  height: 300vh;
+}
+
 .content-container {
   width: 100%;
   height: 100%;
@@ -523,4 +528,158 @@ header .nav-btn__container .hamburger span:nth-child(3) {
   z-index: -1;
   border-radius: 50%;
   border: solid 1px var(--secondaryColorPurple);
+}
+
+#our-workshop {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 95%;
+  place-items: center;
+  row-gap: 2em;
+}
+#our-workshop .content-title {
+  font-family: var(--primaryFont);
+  font-size: var(--headerOne);
+  color: var(--textColorLight);
+}
+#our-workshop .content-title h2 {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 1s;
+}
+#our-workshop .content-title h2.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+#our-workshop .content-title span:nth-child(1) {
+  color: var(--tertierColorBlue);
+}
+#our-workshop .content-title span:nth-child(2) {
+  color: var(--tertierColorYellow);
+}
+#our-workshop .img-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 25% 37.5% 37.5%;
+  grid-template-areas: "landscape landscape" "potrait1 potrait2" "potrait3 potrait4";
+  place-items: center;
+  row-gap: 0.5em;
+}
+#our-workshop .img-container .img-content__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 1s;
+}
+#our-workshop .img-container .img-content__container.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+#our-workshop .img-container .img-content__container:nth-child(1) {
+  grid-area: potrait3;
+}
+#our-workshop .img-container .img-content__container:nth-child(1) img,
+#our-workshop .img-container .img-content__container:nth-child(1) .bg-overlay {
+  width: 500px;
+  height: 550px;
+  position: absolute;
+  border-radius: 0.5em;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+#our-workshop .img-container .img-content__container:nth-child(1) .bg-overlay {
+  background: var(--secondaryColorOrange);
+  transition: transform 0.6s;
+  transition-delay: 0.5s;
+  transform-origin: top;
+}
+#our-workshop .img-container .img-content__container:nth-child(1) .bg-overlay.in-view {
+  transform: scaleY(0);
+}
+#our-workshop .img-container .img-content__container:nth-child(2) {
+  grid-area: landscape;
+}
+#our-workshop .img-container .img-content__container:nth-child(2) img,
+#our-workshop .img-container .img-content__container:nth-child(2) .bg-overlay {
+  width: 900px;
+  height: 450px;
+  position: absolute;
+  border-radius: 0.5em;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+#our-workshop .img-container .img-content__container:nth-child(2) .bg-overlay {
+  background: var(--secondaryColorPink);
+  transition: transform 0.6s;
+  transition-delay: 0.5s;
+  transform-origin: top;
+}
+#our-workshop .img-container .img-content__container:nth-child(2) .bg-overlay.in-view {
+  transform: scaleY(0);
+}
+#our-workshop .img-container .img-content__container:nth-child(3) {
+  grid-area: potrait1;
+}
+#our-workshop .img-container .img-content__container:nth-child(3) img,
+#our-workshop .img-container .img-content__container:nth-child(3) .bg-overlay {
+  width: 500px;
+  height: 550px;
+  position: absolute;
+  border-radius: 0.5em;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+#our-workshop .img-container .img-content__container:nth-child(3) .bg-overlay {
+  background: var(--secondaryColorPurple);
+  transition: transform 0.6s;
+  transition-delay: 0.5s;
+  transform-origin: top;
+}
+#our-workshop .img-container .img-content__container:nth-child(3) .bg-overlay.in-view {
+  transform: scaleY(0);
+}
+#our-workshop .img-container .img-content__container:nth-child(4) {
+  grid-area: potrait2;
+}
+#our-workshop .img-container .img-content__container:nth-child(4) img,
+#our-workshop .img-container .img-content__container:nth-child(4) .bg-overlay {
+  width: 500px;
+  height: 550px;
+  position: absolute;
+  border-radius: 0.5em;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+#our-workshop .img-container .img-content__container:nth-child(4) .bg-overlay {
+  background: var(--tertierColorBlue);
+  transition: transform 0.6s;
+  transition-delay: 0.5s;
+  transform-origin: top;
+}
+#our-workshop .img-container .img-content__container:nth-child(4) .bg-overlay.in-view {
+  transform: scaleY(0);
+}
+#our-workshop .img-container .img-content__container:nth-child(5) {
+  grid-area: potrait4;
+}
+#our-workshop .img-container .img-content__container:nth-child(5) img,
+#our-workshop .img-container .img-content__container:nth-child(5) .bg-overlay {
+  width: 500px;
+  height: 550px;
+  position: absolute;
+  border-radius: 0.5em;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+#our-workshop .img-container .img-content__container:nth-child(5) .bg-overlay {
+  background: var(--tertierColorYellow);
+  transition: transform 0.6s;
+  transition-delay: 0.5s;
+  transform-origin: top;
+}
+#our-workshop .img-container .img-content__container:nth-child(5) .bg-overlay.in-view {
+  transform: scaleY(0);
 }/*# sourceMappingURL=style.css.map */
