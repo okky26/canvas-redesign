@@ -10,7 +10,32 @@ $(document).ready(function(){
         parallaxBottom('.hero-video-content');
     })
 
-    $(window).on('scroll resize', revealOnScroll)
+    $(window).on('scroll resize', revealOnScroll);
+
+    let indexSlider = 0;
+
+    $('.before-btn').click(function(){
+        indexSlider++;
+        $('.after-btn').removeClass('disabled');
+        $('.slides').css('transform', `translateX(calc(-100% * ${indexSlider}))`);
+        if(indexSlider === 3){
+            $('.before-btn').addClass('disabled');
+        }else{
+            return
+        }
+    })
+    $('.after-btn').click(function(){
+        indexSlider--;
+        $('.before-btn').removeClass('disabled');
+        $('.slides').css('transform', `translateX(calc(-100% * ${indexSlider}))`);
+        if(indexSlider === 0){
+            $('.after-btn').addClass('disabled');
+        }else{
+            return
+        }
+    })
+
+    
 })
 
 let animationTarget = $('.animate')
